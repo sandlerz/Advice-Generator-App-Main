@@ -1,0 +1,15 @@
+{
+  "name": "advice-generator-app-main",
+  "version": "1.0.0",
+  "description": "- Solution URL: [Add solution URL here](https://your-solution-url.com) - Live Site URL: [Add live site URL here](https://your-live-site-url.com)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.49.11"
+  }
+}
