@@ -1,3 +1,122 @@
-body{
-  background-color: blue;
+@use "./variables" as *;
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Manrope", Helvetica, sans-serif;
+  font-size: 1.6rem;
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  background-color: $Dark-Blue;
+  color: white;
+}
+
+main {
+  max-width: 1440px;
+  text-align: center;
+}
+
+.card{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 33.6rem;
+  width: 54rem;
+  background-color: $Dark-Grayish-Blue;
+  border-radius: 15px;
+  padding: 5rem 4.5rem 7.5rem;
+
+  &--number{
+    color: $Neon-Green;
+    letter-spacing: 0.5rem;
+  }
+
+  &--advice{
+    color: $Light-Cyan;
+    font-size: 2.8rem;
+  }
+
+  &--divider--desktop{
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  &--divider--mobile{
+    display: none;
+    @extend .card--divider--desktop;
+  }
+
+  &--dice{
+    position: absolute;
+    bottom: -3.25rem;
+    display: grid;
+    width: 6.5rem;
+    height: 6.5rem;
+    border-radius: 50%;
+    background-color: $Neon-Green;
+    place-content: center;
+    img{
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &--dice:hover{
+    box-shadow: 0 0 40px 5px $Neon-Green;
+  }
+}
+
+
+@media only screen and (max-width: 37.5em) {
+  body{
+    padding: 2rem;
+  }
+  .card{
+    max-width: 54rem;
+    min-width: 100%;
+    width: 100%;
+    min-height: 75vw;
+    padding: 10vw 8vw 15vw;
+
+    &--number{
+      font-size: 3vw;
+    }
+
+    &--advice{
+      font-size: 6vw;
+    }
+
+    &--divider--desktop{
+      display: none;
+    }
+
+    &--divider--mobile{
+      display: block;
+    }
+
+    &--dice{
+      width: 15vw;
+      height: 15vw;
+      bottom: -7.5vw;
+      img{
+        width: 6vw;
+      }
+    }
+  }
 }
