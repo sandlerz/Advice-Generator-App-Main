@@ -46,6 +46,7 @@ main {
   }
 
   &--advice{
+    margin: 4rem 0;
     color: $Light-Cyan;
     font-size: 2.8rem;
   }
@@ -100,6 +101,7 @@ main {
 
     &--advice{
       font-size: 6vw;
+      margin: 10vw 0;
     }
 
     &--divider--desktop{
